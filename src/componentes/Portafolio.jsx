@@ -3,7 +3,7 @@ import { trabajos } from "./data/Trabajos";
 const Portafolio = () => {
   return (
     <div className="page">
-      <h1 className="heading"> Portafolio</h1>
+      <h1 className="heading"> Portafolio.</h1>
 
       {trabajos.map((trabajos) => {
         return (
