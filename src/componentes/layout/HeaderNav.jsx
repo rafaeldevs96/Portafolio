@@ -1,6 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 const HeaderNav = () => {
+  const [themeBtn, setThemeBtn] = useState("light");
+
+  const themeDark = () => {
+    setThemeBtn((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
+
+  useEffect(() => {
+    if (themeBtn === "dark") {
+      document.querySelector("html").classList.add("dark");
+    } else {
+      document.querySelector("html").classList.remove("dark");
+    }
+  }, [themeBtn]);
   return (
     <header className="header">
       <div className="logo">
@@ -33,6 +46,11 @@ const HeaderNav = () => {
             <NavLink to={"/contacto"} className={({ isActive }) => (isActive ? "active" : "")}>
               Contacto
             </NavLink>
+          </li>
+          <li>
+            <button className="theme" onClick={themeDark}>
+              ☀️
+            </button>
           </li>
         </ul>
       </nav>

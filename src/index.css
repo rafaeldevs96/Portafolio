@@ -153,3 +153,33 @@ input[type="submit"]:hover,
 button:hover {
   background-color: rgb(13, 179, 13);
 }
+
+.theme {
+  border: none;
+  background-color: white;
+}
+
+.dark {
+  background-color: #1f304e;
+  color: white;
+}
+
+.dark .home strong {
+  color: #fa4529;
+}
+.dark .home p {
+  color: white;
+}
+
+.dark .page .heading,
+.home .heading {
+  color: white;
+}
+
+.dark .home a {
+  color: white;
+}
+
+.dark .header li a {
+  color: white;
+}
